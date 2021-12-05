@@ -1,0 +1,57 @@
+
+version: 2
+
+models:
+    - name: sales_stg
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+          - name: name
+            description: "name of the shoes in the table"
+            tests:
+                - unique
+                - not_null
+
+          - name: brand
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+          - name: price
+            tests:
+                - unique
+                - not_null
+
+          - name: currency
+            tests:
+                - unique
+                - not_null
+                
+          - name: date_add
+            description: "The date of adding this shoes in the marketspace"
+            tests:
+                - unique
+                - not_null 
+
+          - name: date_seen
+            description: "The last date for this shoes in the marketspace"
+            tests:
+                - unique
+                - not_null
+                
+          - name: merchant
+            tests:
+                - unique
+                - not_null
+                
+          - name: condition
+            tests:
+                - unique
+                - not_null
+
